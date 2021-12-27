@@ -24,7 +24,7 @@ export default function IndexPage() {
         <Pricing />
         <OurCustomer />
         <Blog />
-        {/* <Subscription /> */}
+        <Subscription />
       </Layout>
     </ThemeProvider>
   );
