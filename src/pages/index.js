@@ -21,10 +21,10 @@ export default function IndexPage() {
         <Clients />
         <FeaturedSpace />
         <Gallery />
-        <Pricing />
+        {/* <Pricing />
         <OurCustomer />
         <Blog />
-        <Subscription />
+        <Subscription /> */}
       </Layout>
     </ThemeProvider>
   );
