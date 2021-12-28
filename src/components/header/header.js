@@ -82,7 +82,7 @@ const styles = {
     backgroundColor: 'transparent',
     '.is-sticky': {
       header: {
-        backgroundColor: '#fff',
+        backgroundColor: '#4f4e4e',
         boxShadow: '0 6px 13px rgba(38, 78, 118, 0.1)',
         py: [15],
       },
