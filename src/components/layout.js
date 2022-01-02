@@ -6,7 +6,7 @@ import Footer from './footer';
 export default function Layout({ children }) {
   return (
     <React.Fragment>
-      <Header />
+      <Header className="header" />
       <main
         sx={{
           variant: 'layout.main',
@@ -18,3 +18,5 @@ export default function Layout({ children }) {
     </React.Fragment>
   );
 }
+
+

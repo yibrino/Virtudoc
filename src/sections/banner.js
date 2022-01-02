@@ -41,32 +41,29 @@ export default function Banner() {
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.bannerContent}>
             <Heading as="h1" sx={styles.heroTitle}>
-              
-See Your Doctor
-Anytime.
-Anywhere.
-
+              Coworking space that will feel like home.
             </Heading>
             <Text as="p" sx={styles.desc}>
-            Using VirtuDoc, patients can access doctors from anywhere in the world.
-             Why travel across the world when VirtuDoc can bring doctors from around the world to you!
+              Whether you’re an established enterprise or a growing startup,
+              discover spaces that inspire which will best your most impactful
+              work.
             </Text>
             <Box as="form" onSubmit={handleSubmit}>
-              {/* <Select
+              <Select
                 id="location"
                 label="Find workplace"
-                // defaultValue={options[1].label}
+                defaultValue={options[1].label}
                 sx={styles.select}
-                icon={mapMarker}s
+                icon={mapMarker}
               >
                 {options?.map((option) => (
                   <option value={option.value} key={option.id}>
                     {option.label}
                   </option>
                 ))}
-              </Select> */}
+              </Select>
               <Button type="submit" sx={styles.button} variant="primary">
-                Contact
+                Subscribe
               </Button>
             </Box>
           </Box>
@@ -87,7 +84,6 @@ const styles = {
     minHeight: [null, null, null, null, '50vh', '100vh'],
   },
   bannerContent: {
-    marginTop:'50px',
     backgroundColor: rgba('#fff', 0.93),
     boxShadow: [
       '0px 10px 16px rgba(52, 61, 72, 0.12)',

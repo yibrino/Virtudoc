@@ -10,21 +10,25 @@ import OurCustomer from 'sections/our-customer';
 import Gallery from 'sections/gallery';
 import Pricing from 'sections/pricing';
 import Blog from 'sections/blog';
+
 import Subscription from 'sections/subscription';
+import Slider from '../components/Slider/Slider';
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
         <SEO title="Virtudoc" />
-        <Banner />
-        <Clients />
+        {/* <Banner /> */}
+        <Slider />
+
+        {/* <Clients /> */}
         <FeaturedSpace />
         <Gallery />
         {/* <Pricing />
         <OurCustomer />
-        <Blog />
-        <Subscription /> */}
+        <Blog /> */}
+        <Subscription />
       </Layout>
     </ThemeProvider>
   );

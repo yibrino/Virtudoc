@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx, Image } from 'theme-ui';
 import { Link } from 'components/link';
-import logo from 'assets/images/logo.png';
-import logoWhite from 'assets/images/logo-white.png';
+import logo from 'assets/images/logo1.png';
 
 export default function Logo({ white }) {
   return (
@@ -12,7 +11,7 @@ export default function Logo({ white }) {
         variant: 'links.logo',
       }}
     >
-      <Image src={white ? logoWhite : logo} />
+      <Image src="https://lirp.cdn-website.com/3a2c1857/dms3rep/multi/opt/High_def_logo_sm-153w.png" alt="Virtudoc logo" />
     </Link>
   );
 }

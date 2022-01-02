@@ -1,37 +1,10 @@
 /** @jsx jsx */
 import { jsx, Box, Flex, Text, Container } from 'theme-ui';
 import { Link } from 'components/link';
-import { Heading } from 'theme-ui'
 import Logo from 'components/logo';
 import { rgba } from 'polished';
 
-// const navItems = [
-//   {
-//     id: 1,
-//     link: '#!',
-//     title: 'Home',
-//   },
-//   {
-//     id: 2,
-//     link: '#!',
-//     title: 'Advertise',
-//   },
-//   {
-//     id: 3,
-//     link: '#!',
-//     title: 'Supports',
-//   },
-//   {
-//     id: 4,
-//     link: '#!',
-//     title: 'Marketing',
-//   },
-//   {
-//     id: 5,
-//     link: '#!',
-//     title: 'FAQ',
-//   },
-// ];
+
 
 export default function Footer() {
   return (
@@ -39,32 +12,14 @@ export default function Footer() {
       <Container sx={styles.container}>
         <Flex sx={styles.content}>
           <Flex sx={styles.copyright}>
-            <Logo sx={styles.heading} white />
-            {/* <Text as="span">
-              All right reserved - Design &amp; Developed by RedQ, Inc
-            </Text> */}
-          </Flex>
 
-          {/* <Flex as="ul" sx={styles.nav}>
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <Link path={item.link}>{item.title}</Link>
-              </li>
-            ))}
-          </Flex> */}
-          <Heading  sx={styles.heading} as='h3'>Social</Heading>
-          <Heading sx={styles.heading} as='h3'>Ethiopia</Heading>    
-          <Heading sx={styles.heading} as='h3'>Virtudoc</Heading>
-        </Flex>
-   
-
-
-            <Flex sx={styles.copyright}>
-        
             <Text as="span">
-          © 2021 Virtudoc. All rights reserved.
+              ©2021 Virtudoc. All rights reserved.
             </Text>
           </Flex>
+
+
+        </Flex>
       </Container>
     </Box>
   );
@@ -73,17 +28,10 @@ export default function Footer() {
 const styles = {
   footer: {
     backgroundColor: '#020718',
-    height:'250px',
-  },
-  heading: {
-    color: '#fff',
-    mb: 20,
-    p: {
-      color: '#fff',
-    },
   },
   content: {
     alignItems: 'center',
+    justifyContent: 'center',
     borderTop: `1px solid ${rgba('#fff', 0.15)}`,
     display: ['block', null, null, null, 'flex'],
     justifyContent: 'space-between',
@@ -95,15 +43,17 @@ const styles = {
     },
   },
   copyright: {
-    display: ['block', 'flex'],
-    alignItems: 'center',
-    justifyContent: ['center', null, null, null],
+
     span: {
       fontSize: '14px',
       lineHeight: [1.8, null, null, 1.29],
       color: rgba('#FFFFFF', 0.7),
       marginTop: 1,
-      display: 'inline-flex',
+
+      marginLeft: 450,
+      alignItems: 'center',
+      display: 'flex',
+
     },
   },
   nav: {

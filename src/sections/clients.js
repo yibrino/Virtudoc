@@ -146,7 +146,9 @@ const styles = {
     marginTop: 5,
   },
   paginationButton: {
+    backgroundColor: 'green',
     minHeight: '30px',
+
     padding: 0,
     position: 'absolute',
     bottom: '-60px',

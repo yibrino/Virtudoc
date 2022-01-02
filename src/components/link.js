@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Link as A } from 'theme-ui';
 import { Link as MenuLink } from 'react-scroll';
+
 import NextLink from 'next/link';
 export function NavLink({ path, label, children, ...rest }) {
   return (
@@ -14,7 +15,9 @@ export function NavLink({ path, label, children, ...rest }) {
       activeClass="active"
       {...rest}
     >
-      {label}
+      <NextLink href={path}>
+        <A sx={styles.slogan} >{label}</A>
+      </NextLink>
     </MenuLink>
   );
 }
@@ -32,3 +35,13 @@ export function Link({ path, label, children, ...rest }) {
     </NextLink>
   );
 }
+const styles = {
+  slogan: {
+    fontSize: 13,
+    fontWeight: 200,
+    lineHeight: 2.22,
+    mb: ['12px'],
+  },
+
+};
+

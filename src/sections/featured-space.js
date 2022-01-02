@@ -9,9 +9,9 @@ import Image from 'components/image';
 import expand from 'assets/images/icons/expand.png';
 import users from 'assets/images/icons/users.png';
 import wifi from 'assets/images/icons/wifi.png';
-import slider1 from 'assets/images/features/1.jpg';
-import slider2 from 'assets/images/features/2.jpg';
-import slider3 from 'assets/images/features/3.jpg';
+import slider1 from 'assets/images/features/1.png';
+import slider2 from 'assets/images/features/2.webp';
+import slider3 from 'assets/images/features/3.png';
 
 import SwiperCore, { Autoplay, Pagination, EffectFade } from 'swiper';
 // Import Swiper React components
@@ -68,7 +68,7 @@ const FeaturedSpace = () => {
   const [togglePlay, setTogglePlay] = useState(false);
   const [currentWidth, setCurrentWidth] = useState(0);
 
-  let time = 2;
+  let time = 3;
   let tick, percentTime;
 
   function startProgressbar() {
@@ -107,27 +107,43 @@ const FeaturedSpace = () => {
       <Container>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.leftContent}>
-            <SectionHeading
+            {/* <SectionHeading
               sx={styles.heading}
-              title="
-              Tailored for African Needs
-              "
-              description="Advancing healthcare in Africa is our passion. VirtuDoc is a technology platform designed with one thing in mind; unlimited access to healthcare for Africans.
-               VirtuDoc makes physical location-based healthcare service less mandatory. "
+              title="Some good place to where can build your startup business"
+              description="Co-working offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities."
             />
             <Box sx={styles.featureWrapper}>
               {data?.feature?.map((feature) => (
                 <Feature key={feature.id} data={feature} />
               ))}
+            </Box> */}
+
+
+            <Box sx={styles.bannerContent}>
+              <Heading as="h1" sx={styles.heroTitle}>
+
+                See Your Doctor
+                Anytime.
+                Anywhere.
+
+              </Heading>
+              <Text as="p" sx={styles.desc}>
+                Using VirtuDoc, patients can access doctors from anywhere in the world.
+                Why travel across the world when VirtuDoc can bring doctors from around the world to you!
+              </Text>
+
             </Box>
+
+
+
+
+
+
+
+
           </Box>
           <Box sx={styles.rightContent}>
-            {/* <Progressbar
-              sx={styles.progressbar}
-              togglePlay={togglePlay}
-              handleClick={handleToggle}
-              currentWidth={currentWidth}
-            /> */}
+
             <Swiper
               loop={true}
               effect="fade"
@@ -140,12 +156,7 @@ const FeaturedSpace = () => {
                 <SwiperSlide key={item.id}>
                   <Box as="figure" sx={styles.image}>
                     <Image loading="lazy" src={item.image} alt="" />
-                    {/* <Box as="figcaption">
-                      <Box>
-                        <Heading as="h4">{item.title}</Heading>
-                        <Text as="p">{item.desc}</Text>
-                      </Box>
-                    </Box> */}
+
                   </Box>
                 </SwiperSlide>
               ))}
@@ -170,6 +181,34 @@ const styles = {
     alignItems: 'center',
     flexDirection: ['column', null, null, null, null],
     gridTemplateColumns: ['unset', null, null, null, 'repeat(2,1fr)'],
+  },
+  bannerContent: {
+    marginTop: '50px',
+    backgroundColor: rgba('#e1e1e1', 0.93),
+    boxShadow: [
+      '0px 10px 16px rgba(52, 61, 72, 0.12)',
+      null,
+      null,
+      null,
+      'none',
+    ],
+    maxWidth: [null, null, null, 600, 500, null, 650],
+    padding: [
+      '20px',
+      '30px',
+      null,
+      null,
+      null,
+      '30px 50px 60px',
+      '50px 60px 90px',
+    ],
+    borderRadius: 5,
+    m: ['110px 0 0', null, null, '110px auto 0', '60px 0 0', null, 0],
+    '@media only screen and (min-height: 720px) and (max-height: 760px), (min-width: 1501px) and (max-width: 1560px) ': {
+      maxWidth: 515,
+      mt: 70,
+      padding: '30px 50px 65px',
+    },
   },
   leftContent: {
     m: [0, '30px 0px 0', '30px 50px 0', 0],
@@ -199,6 +238,24 @@ const styles = {
       'repeat(3,1fr)',
     ],
     justifyContent: ['unset', null, null, 'center', 'flex-start'],
+  },
+  heroTitle: {
+    fontSize: [22, 28, 28, 40, , 5, 6],
+    fontWeight: 700,
+    letterSpacing: 'heading',
+    lineHeight: [1.4, null, null, null, null, null, 1.57],
+    '@media only screen and (min-height: 720px) and (max-height: 760px), (min-width: 1501px) and (max-width: 1560px) ': {
+      fontSize: 40,
+    },
+  },
+  desc: {
+    fontSize: [15, 16, 15, 17],
+    lineHeight: [1.53, 1.53, 1.53, 2, 2.4, 2, 2.48],
+    maxWidth: 440,
+    marginTop: [15, 15, 15, null, null, null, 30],
+    '@media only screen and (min-height: 720px) and (max-height: 760px), (min-width: 1501px) and (max-width: 1560px) ': {
+      mt: 15,
+    },
   },
   rightContent: {
     position: 'relative',
@@ -248,8 +305,6 @@ const styles = {
   image: {
     position: 'relative',
     display: 'flex',
-  
-  height:'700px',
     alignItems: 'flex-start',
     '> img': {
       borderRadius: 10,

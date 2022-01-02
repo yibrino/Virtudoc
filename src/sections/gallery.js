@@ -55,8 +55,8 @@ const Gallery = () => {
       <Container sx={styles.container}>
         <SectionHeading
           sx={styles.heading}
-          slogan="Working space"
-          title="Let’s meet our interior room decoration"
+          slogan=" Our highly Standard Laboratories And Professional Staffs"
+
         />
         <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
           {data?.map((item) => (
@@ -82,7 +82,7 @@ const styles = {
     mb: [30, 30, 40, 60],
   },
   galleryWrapper: {
-    height:'650px',
+    height: '650px',
     mx: '-15px',
   },
   button: {

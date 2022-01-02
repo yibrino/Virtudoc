@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Container, MenuButton, Flex, Button } from 'theme-ui';
+import { jsx, Box, Container, MenuButton, Flex, Button, Text } from 'theme-ui';
 import { useState } from 'react';
 import { GrClose } from 'react-icons/gr';
 import Sticky from 'react-stickynode';
@@ -23,6 +23,7 @@ export default function Header() {
   };
 
   return (
+
     <Box sx={styles.headerWrapper}>
       <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
         <Box
@@ -30,9 +31,10 @@ export default function Header() {
           sx={styles.header}
           className={mobileMenu ? 'is-mobile-menu' : ''}
         >
+          <Logo />
           <Container>
             <Box sx={styles.headerInner}>
-              <Logo />
+
 
               <Flex
                 as="nav"
@@ -49,14 +51,14 @@ export default function Header() {
                       <NavLink
                         path={path}
                         label={label}
-                        onClick={closeMobileMenu}
+
                       />
                     </li>
                   ))}
                 </Box>
-                <Button sx={styles.joinNow} variant="primaryMd">
-                  Make Appointement
-                </Button>
+                <Text sx={styles.joinNow} variant="primaryMd">
+                  MAKE APPOINTMENT
+                </Text>
               </Flex>
 
               {mobileMenu ? (
@@ -80,15 +82,19 @@ export default function Header() {
 const styles = {
   headerWrapper: {
     backgroundColor: 'transparent',
+    marginTop: -100,
+
     '.is-sticky': {
       header: {
-        backgroundColor: '#4f4e4e',
-        boxShadow: '0 6px 13px rgba(38, 78, 118, 0.1)',
-        py: [15],
+        backgroundColor: '#fff',
+        boxShadow: '0 6px 13px rgba(108, 78, 118, 0.1)',
+        py: [30],
       },
     },
   },
   header: {
+    alignItems: 'center',
+    display: 'flex',
     position: 'fixed',
     left: 0,
     right: 0,
@@ -99,6 +105,7 @@ const styles = {
     },
   },
   headerInner: {
+
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -144,13 +151,12 @@ const styles = {
     p: 0,
     '.nav-item': {
       cursor: 'pointer',
-      fontWeight: 500,
-
+      fontWeight: 400,
       padding: 0,
       margin: '0 20px',
     },
     '.active': {
-      color: 'green',
+      color: 'primary',
     },
   },
   joinNow: {

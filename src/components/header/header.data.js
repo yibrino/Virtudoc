@@ -1,26 +1,32 @@
 export default [
   {
-    path: 'home',
-    label: 'Home',
+    path: '',
+    label: 'HOME',
   },
   {
-    path: 'clients',
-    label: 'Clients',
+    path: 'services',
+    label: 'SERVICES',
   },
   {
-    path: 'feature',
-    label: 'Feature',
+    path: 'doctors',
+    label: 'DOCTORS',
   },
+  {
+    path: 'news',
+    label: 'NEWS',
+  },
+
+  {
+    path: 'aboutus',
+    label: 'ABOUT US',
+  }, {
+    path: 'contactus',
+    label: 'CONTACT US',
+  },
+
   {
     path: 'gallery',
-    label: 'Gallery',
+    label: 'GALLERY',
   },
-  {
-    path: 'pricing',
-    label: 'Pricing',
-  },
-  {
-    path: 'blog',
-    label: 'Blog',
-  },
+
 ];
